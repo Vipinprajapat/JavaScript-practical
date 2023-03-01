@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="submit" id="bulb-on" value="ON" onclick="bulbon()">
+    <img src="pic_bulboff.gif" id="myimg" alt="" height="550px" width="320px" onmouseover="bulbon()" onmouseleave="bulboff()">
+    <input type="submit" id="bulb-off" value="OFF" onclick="bulboff()">
+    <!-- <input type="submit" name="btn-onoff" id="on-off" value="on/off" onclick="onoff()"> -->
+
+    <!-- <img src="pic_bulbon.gif" alt="">> -->
+    <script>
+        function bulbon(){
+            var img=document.getElementById("myimg");
+            img.src="pic_bulbon.gif"
+        }
+        function bulboff(){
+            var img=document.getElementById("myimg");
+            img.src="pic_bulboff.gif";
+        }
+       
+        // function onoff(){
+        //     var img=document.getElementById("myimg");
+        //     img.src="pic_bulbon.gif"
+
+
+        // }
+        // function onoff(){
+        //     var img=document.getElementById("myimg");
+        //     img.src="pic_bulboff.gif";
+
+        // }
+    </script>
+</body>
+</html>
