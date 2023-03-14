@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-size: 22px;
+        }
+        div input{
+            width: 180px;
+            margin: 10px;
+            border: 2px solid lawngreen;
+            border-radius: 10px;
+        }
+        span{
+            font-size: 20px;
+            color: red;
+            font-weight: 100;
+            font-style: italic;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <form id="form" name="myform">
+        <div>
+           Name :- <input type="text" name="fname">
+           <span id="name"></span>
+        </div>
+        <div>
+            E-mail:- <input type="text" name="femail">
+            <span id="email"></span>
+        </div>
+        <div>
+            Phone :- <input type="text" name="fphone">
+            <span id="phone"></span>
+        </div>
+        <input type="submit" name="btn">
+    </form>
+    
+    <script>
+        var error=document.getElementById("name")
+        form.onsubmit=function()
+        {
+            if(form.fname.value.length==0){
+                error.innerHTML="*The Value Of Name Can't be zero"
+                return false;
+            }
+            
+            var error1=document.getElementById("email")
+            if(form.femail.value.length==0){
+                error1.innerHTML="*The Value Of Email Can't be zero"
+                return false;
+            }
+            
+            var error2=document.getElementById("phone")
+            if(form.fphone.value.length==0){
+                error2.innerHTML="*The Value Of phone Can't be zero"
+                return false;
+            }
+         }
+    </script>
+</body>
+</html>
