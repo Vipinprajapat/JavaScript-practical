@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: cursive;
+            margin: 0;
+            padding: 0;
+            font-size: 32px;
+        }
+        form{
+            position: relative;
+            width:100%;
+            height:550px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        form input{
+            margin-left: 10px;
+            border: 2px solid coral;
+        }
+        #error img{
+            width:100px;
+            height:60px;
+        }
+        .blank{
+            position: absolute;
+            top: 15%;
+            left: 64%;
+            height: 250px;
+            width: 350px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body> 
+    <form name="myform">
+        Card Number <input type="text" name="card" id="ATM" onkeyup="validate()">
+        <span id="error">
+            <img src="img/white.png" id="img0" alt="">
+            <img src="img/master.png"  id="img1" alt="">
+            <img src="img/visa.png"  id="img2" alt="">
+            <img src="img/rupay.png"  id="img3" alt="">
+        </span>
+    </form>
+    <div class="blank">
+        
+    </div>
+    <script>
+        function validate() {
+            var msg=document.getElementById("ATM").value;
+            // var msg=document.myform.card.value;
+            var img =document.getElementById("img0");
+           if(msg==1234){
+            img.src="img/master.png"
+            
+        }
+        else if(msg==4567){
+               img.src="img/visa.png"
+            }
+        else if(msg==7890){
+               img.src="img/rupay.png"
+            }
+            else{
+                img.src="img/white.png"
+           }
+        }
+    </script>
+</body>
+</html>
