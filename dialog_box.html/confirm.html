@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="submit" onclick="demo()">
+
+    <script>
+
+        // function demo(){
+        //     var reply=confirm("are you paying the fee");
+        //     if(reply==true){
+        //         alert("transaction successful");
+        //     }
+        //     else{
+        //         alert("transaction failed");
+        //     }
+        // }
+
+        function demo(){
+            var ans=confirm("are you willing to pay");
+            if(ans==true){
+                alert("payment success");
+                // window.location='form.html';
+                // return true;
+                
+            }
+            else{
+                alert("transaction failed");
+                // return false;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="submit" onclick="prompt_btn()">
+    <script>
+        function prompt_btn(){
+            var reply=prompt("enter your password");
+            if(reply==123)
+            {
+                alert("login successful");
+                // window.location="form.html";
+            }
+            else
+            {
+                alert("login failed");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
