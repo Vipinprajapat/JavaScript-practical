@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.write("hyy" + "<br>");
+      document.writeln("hyy" + "<br>"); //not work properly
+    </script>
+
+    <p id="rahul"></p>
+    <p id="rohit"></p>
+
+    <script>
+      document.getElementById("rahul").innerHTML = "<h1>Abhishek<h1>";
+      document.getElementById("rohit").innerText = "<h1>Abhishek<h1>";
+    </script>
+
+    <form>
+      Enter No <input type="text" name="num" id="num" value="20" />
+      <input type="button" value="Click" onclick="add()" />
+      <p id="msg"></p>
+    </form>
+
+    <script>
+      function add() {
+        var number = document.getElementById("num").value;
+        document.getElementById("msg").innerHTML = number;
+      }
+    </script>
+
+    <div class="color-div">
+      <p>style color through index[0]</p>
+    </div>
+    <div class="color-div">
+      <p>style color through index[1]</p>
+    </div>
+
+    <div class="color-div">
+      <p>style color through index[2]</p>
+    </div>
+    <div class="color-div">
+      <p>style color through index[3]</p>
+    </div>
+
+    <input type="button" onclick="demo()" value="check it" />
+    <input type="button" onclick="demo1()" value="check-it" />
+
+    <script>
+      function demo() {
+        var x = document.getElementsByClassName("color-div");
+        x[0].style.color = "red";
+        x[1].style.backgroundColor = "yellow";
+        x[2].style.color = "blue";
+        x[3].style.color = "green";
+      }
+
+      function demo1() {
+        var x = document.getElementsByClassName("color-div");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.backgroundColor = "violet";
+        }
+      }
+    </script>
+    <br /><br />
+    <!-- by name  -->
+    User_name: <input type="text" name="str" />
+    <p id="txt"></p>
+    <input type="button" value="print" onclick="demo2()" />
+    <script>
+      function demo2() {
+        var user = document.getElementsByName("str")[0].value;
+        document.getElementById("txt").innerHTML = user;
+      }
+    </script>
+
+    <h2>hey how are you</h2>
+    <button onclick="count()">No. of h2 tags</button>
+    <p id="c-msg"></p>
+    <script>
+      function count() {
+        var counttag = document.getElementsByTagName("h2");
+        // alert("total h2 tags are"+counttag.length);
+        document.getElementById("c-msg").innerHTML =
+          "total no. of h2 tag are :" + counttag.length;
+      }
+    </script>
+    <hr />
+    <hr />
+    <hr />
+
+    <button onclick="showform()">Form</button>
+    <p id="f-msg"></p>
+    <script>
+      function showform() {
+        var data =
+          "User_name:<input type='text' name='txt-name'><br><br>Comment:<br><br><textarea name='txt-area' id='txt-id' cols='70' rows='5'></textarea><br> <input type='submit' value='Post-Comment'>";
+
+        document.getElementById("f-msg").innerHTML = data;
+      }
+    </script>
+    <form name="myform">
+      Password:-<input
+        type="password"
+        onkeyup="validate()"
+        name="passdata"
+        id="passid"
+      />Strength:-
+      <span id="passmsg">no Strength</span>
+    </form>
+    <script>
+      function validate() {
+        var msg;
+        if (document.myform.passdata.value.length < 5)
+        {
+          document.getElementById("passmsg").innerText = "poor";
+          document.getElementById("passmsg").style.color = "red";
+        //   document.getElementById("passid").style.Color="red";
+        }
+        else if(document.myform.passdata.value.length>=5 && document.myform.passdata.value.length<8)
+        {
+          document.getElementById("passmsg").innerText = "good";
+          document.getElementById("passmsg").style.color = "blue";
+          
+        }
+         else
+        {
+          document.getElementById("passmsg").innerText = "Strong";
+          document.getElementById("passmsg").style.color = "green";
+        }
+      }
+    </script>
+  </body>
+</html>

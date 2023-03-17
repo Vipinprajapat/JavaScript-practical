@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" onclick="address()" value="get domain">    
+    <script>
+        function address(){
+            alert(document.domain())
+        }
+
+    </script>
+<br><br>
+    Cat <input type="radio" name="Animal" id="nothuman" value="cat">
+    Dog <input type="radio" name="Animal" id="nothuman" value="dog">
+    <p id="err"></p>
+    <input type="button" name="btn" id="btnid" onclick="checking()" value="btn">
+    <input type="button" name="btn" onclick="check()" value="btn-2">
+    <p id="err1"></p>
+
+    <script>
+        function checking(){
+
+            var msg=document.getElementsByName("Animal");
+            if(msg[0].checked == true){
+                
+            }
+            else if(msg[1].checked == true)
+            {
+                
+            }
+            else{
+                document.getElementById("err").innerHTML="please select atleast one";
+            }
+        }
+        function check(){
+            var data=document.getElementsByName("Animal");
+            if(data[0].checked==true){
+                document.getElementById("err1").innerHTML="Cat";
+            }
+            else if(data[1].checked==true){
+                document.getElementById("err1").innerHTML="Dog";
+            }
+            else{
+                document.getElementById("err1").innerHTML="Select atleast one animal"
+                
+            }
+        }
+    </script>
+    
+</body>
+</html>
