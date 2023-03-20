@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        polymorphism:- polymorphism is derived from polymorph in that
+        poly means many and morphs means transforming one from other.
+
+        in oop, polymorphism performing same operation in multiple ways.
+
+        overloading:-thats not possible in js
+        use same name of function in different ways in same class;
+
+        overriding:-
+        use same name of function in different ways in parent and child class.
+     -->
+
+     <!-- overiding-->
+     <script>
+        class A
+        {
+            display()
+            {
+                document.write("Function A invoked/call <br>")
+            }
+        }
+        class B 
+        {
+            display()
+            {
+                document.write("Function B is invoked <br>")
+            }
+        }
+        class C 
+        {
+            display()
+            {
+                document.write("Function C is invoked <br>")
+            }
+        }
+
+        var obj=[new A(), new B(), new C()]
+        
+        obj.forEach(function(msg)
+        {
+            msg.display();
+        })
+     </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        inheritance:- The Ability to Aquire Functionality of parent class to child class using extend keyword and bulid
+        relationship between them.
+
+        types of inheritance
+        1.Single level inheritance
+        2.multiple inheritance
+        3.hierarchical inheritance
+        4.hybrid inheritance
+        5.multilevel inheritance //not possible in js
+     -->
+     <script>
+
+        // single level inheritance:- b acquire all properties of a.
+        // class a
+        // {
+        //     sum()
+        //     {
+        //         var x=80;
+        //         var y=20;
+        //         var sum=x+y;
+        //         document.write(sum+"<br>");
+        //     }
+        // }
+
+
+        // class b extends a
+        // {
+        //     multi()
+        //     {
+        //         var i=4;
+        //         var j=2;
+        //         var multi=i*j;
+        //         document.write(multi);
+        //     }
+        // }
+
+        // var obj=new b();
+        // obj.sum();
+        // obj.multi();
+
+        // document.write('<br>');
+
+
+        // multilevel inheritance:- b can access properties of a  and c can aquire all properties of b.
+        // class abc
+        // {
+        //     sum()
+        //     {
+        //         var a=10;
+        //         var b=10; 
+        //         var sum=a+b;
+        //         document.write(sum+"<br>");
+        //     }
+        // }
+        // class xyz extends abc
+        // {
+        //     sub()
+        //     {
+        //         var x=50;
+        //         var y=10;
+        //         var sub=x-y;
+        //         document.write(sub+"<br>");
+        //     }
+        // }
+
+        // class pqr extends xyz
+        // {
+        //     multi()
+        //     {
+        //         var i=50;
+        //         var j=10;
+        //         var multi= i * j;
+        //         document.write(multi);
+        //     }
+        // }
+
+        // var obj= new pqr;
+        // obj.sum();
+        // obj.sub();
+        // obj.multi();
+
+
+        /*hierarchial inheritance:- b and c can aquire all properties of a.*/
+
+        // class abc
+        // {
+        //     sum()
+        //     {
+        //         var a=10;
+        //         var b=40;
+        //         var sum=a+b;
+        //         document.write(sum+"<br>");
+        //     }
+        // }
+
+
+        // class xyz extends abc
+        // {
+        //     sub()
+        //     {
+        //         var a=50;
+        //         var b=40;
+        //         var sub=a-b;
+        //         document.write(sub+"<br>");   
+        //     }
+        // }
+
+        // class pqr extends abc
+        // {
+        //     multi()
+        //     {
+        //         var a=40;
+        //         var b=10;
+        //         var multi=a*b;
+        //         document.write(multi);
+        //     }
+        // }
+
+        // var obj1=new xyz;
+        // obj1.sum();
+        // obj1.sub();
+        // var obj2= new pqr;
+        // obj2.sum();
+        // obj2.multi();
+
+        // hybrid inheritance :- made of two or more inheritance pattern
+
+        class abc{
+            sum()
+            {
+                var a=80;
+                var b=20;
+                var sum=a+b;
+                document.write(sum);
+            }
+
+        }
+        class xyz extends abc
+        {
+            sub()
+            {
+                var a=80;
+                var b=20;
+                var sub=a-b;
+                document.write(sub+"<br>");
+            }   
+        }
+        class pqr extends xyz
+        {
+            multi()
+            {
+                var a=80;
+                var b=20;
+                var multi=a*b;
+                document.write(multi+"<br>");
+            }
+        }
+        class ijk extends xyz
+        {
+            div()
+            {
+                var a=80;
+                var b=20;
+                var div=a/b;
+                document.write(div+"<br>");
+            }
+        }
+
+        var obj1=new abc;
+        obj1.sum();  //access self object
+
+        document.write('<br>');
+
+        var obj2=new xyz;
+        obj2.sub(); //self object
+        obj2.sum();  //inherit from abc
+
+        document.write('<br>');
+
+        var obj3=new pqr;
+        obj3.multi(); //self
+        obj3.sub();  //inherit from xyz
+        obj3.sum();  //inherit from abc
+
+        document.write('<br>');
+
+        var obj4=new ijk;
+        obj4.div();    //self
+        obj4.sub();    //inherit from xyz
+        obj4.sum();   //inherit from abc
+
+
+        </script>
+</body>
+</html>
